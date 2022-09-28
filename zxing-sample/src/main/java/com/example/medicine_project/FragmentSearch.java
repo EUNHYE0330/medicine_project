@@ -1,11 +1,13 @@
 package com.example.medicine_project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 import me.dm7.barcodescanner.zxing.sample.R;
@@ -18,7 +20,7 @@ public class FragmentSearch extends Fragment {
     private AutoCompleteTextView txAutoComplete;
     private ArrayList<String> DrugList;
     private AutoComplete autoDB;
-
+    Button myButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,15 @@ public class FragmentSearch extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_search, container, false);
 
+        myButton = view.findViewById(R.id.buttonBarcode);
+        myButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),SimpleScannerActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+            }
+        });
         txAutoComplete = view.findViewById(R.id.txAutoComplete);
         autoDB = new AutoComplete(getActivity());
 

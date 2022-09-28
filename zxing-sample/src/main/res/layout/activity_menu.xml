@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuActivity">
+    tools:context="com.example.medicine_project.MenuActivity">
     <!--android:background="@drawable/main_header_selector"-->
 
         <FrameLayout
@@ -24,8 +24,9 @@
             <Button
                 android:id="@+id/bt_tab1"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginTop="10dp"
                 android:background="#00ffffff"
                 android:drawableTop="@drawable/drawble_resize"
                 android:textSize="12sp" />
@@ -35,6 +36,7 @@
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:background="#00ffffff"
                 android:drawableTop="@drawable/drawble_resize3"
                 android:textSize="12sp"/>
@@ -44,9 +46,9 @@
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:background="#00ffffff"
                 android:drawableTop="@drawable/drawble_resize2"
-                android:textSize="12sp"
-                />
+                android:textSize="12sp" />
         </LinearLayout>
 </RelativeLayout>

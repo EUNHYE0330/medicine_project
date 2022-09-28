@@ -11,7 +11,7 @@ ext.versions = [
 ext.libraries = [
         support_v4          : 'androidx.legacy:legacy-support-v4:1.0.0',
         appcompat_v7        : 'androidx.appcompat:appcompat:1.0.0',
-        design_support      : 'com.google.android.material:material:1.0.0',
+        design_support      : 'com.google.android.material:material:1.1.0',
         zxing_core          : "com.google.zxing:core:$versions.zxing",
         barcodescanner_core : "me.dm7.barcodescanner:core:$versions.barcodescanner",
         barcodescanner_zbar : "me.dm7.barcodescanner:zbar:$versions.barcodescanner",
