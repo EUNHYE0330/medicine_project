@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="medi_count">
+        <item>0알</item>
+        <item>1알</item>
+        <item>2알</item>
+        <item>3알</item>
+    </string-array>
+</resources>
