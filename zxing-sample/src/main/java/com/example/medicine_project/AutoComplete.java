@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 
 public class AutoComplete extends DatabaseHelper {
+
+
     private SQLiteDatabase db;
     private static String tableName = "drug"; // 테이블 이름
     private String drugName = "drugName";

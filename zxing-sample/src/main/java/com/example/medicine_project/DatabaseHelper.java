@@ -180,4 +180,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         super.onConfigure(db);
         db.disableWriteAheadLogging();
     }
+
+
 }

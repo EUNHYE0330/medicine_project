@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 import me.dm7.barcodescanner.zxing.sample.Drug;
 
-public class DBHandler extends SQLiteOpenHelper {
+    public class DBHandler extends SQLiteOpenHelper {
 
     @Override
     public void onConfigure(SQLiteDatabase db) {
@@ -22,13 +22,13 @@ public class DBHandler extends SQLiteOpenHelper {
 
     // creating a constant variables for our database.
     // below variable is for our database name.
-    private static final String DB_NAME = "medicine.db";
+    private static final String DB_NAME = "drug.db";
 
     // below int is our database version
     private static final int DB_VERSION = 1;
 
     // below variable is for our table name.
-    private static final String TABLE_NAME = "list";    // 테이블 이름 바꿔서 테스트함
+    private static final String TABLE_NAME = "drug";    // 테이블 이름 바꿔서 테스트함
 
     // creating a constructor for our database handler.
     public DBHandler(Context context) {
@@ -68,6 +68,7 @@ public class DBHandler extends SQLiteOpenHelper {
         cursorCourses.close();
         return drug;
     }
+
 
     // ================================================================================================================================
 

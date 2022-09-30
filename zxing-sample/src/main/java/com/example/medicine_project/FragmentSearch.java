@@ -40,6 +40,9 @@ public class FragmentSearch extends Fragment {
                 startActivity(intent);
             }
         });
+
+        // ======================================================================
+
         txAutoComplete = view.findViewById(R.id.txAutoComplete);
         autoDB = new AutoComplete(getActivity());
 
