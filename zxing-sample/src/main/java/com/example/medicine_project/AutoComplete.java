@@ -29,7 +29,7 @@ public class AutoComplete extends DatabaseHelper {
 
     }
 
-    //검색기능
+    //검색기능 수정해야함
     @SuppressLint("Range")
     public ArrayList<String> getName() {
         ArrayList<String> DrugList = new ArrayList<>();
