@@ -41,6 +41,16 @@ public class FragmentSearch extends Fragment {
             }
         });
 
+        Button searchbtn = view.findViewById(R.id.searchbtn);
+        searchbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), DetailActivity.class);
+                intent.putExtra("drugName", txAutoComplete.getText().toString());
+                startActivity(intent);
+            }
+        });
+
         // ======================================================================
 
         txAutoComplete = view.findViewById(R.id.txAutoComplete);

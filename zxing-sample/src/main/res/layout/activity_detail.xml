@@ -23,12 +23,12 @@
             android:id="@+id/name_drug"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="25dp"
             android:layout_weight="1"
             android:gravity="center|left"
-            android:text="@string/namedrug"
+            android:text="약 이름"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="15dp"
             android:textStyle="bold" />
 
         <Button
@@ -66,20 +66,34 @@
                 tools:text="이미지" />
 
             <TextView
-                android:id="@+id/ingredient"
+                android:id="@+id/company"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="[성분정보]"
+                android:text="[제조회사]"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/companydata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="제조회사" />
+
+            <TextView
+                android:id="@+id/code"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="[제품코드]"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/ingdata"
+                android:id="@+id/codedata"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/ingdata" />
-
+                android:text="제품코드" />
             <TextView
                 android:id="@+id/effect"
                 android:layout_width="wrap_content"
@@ -90,10 +104,85 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/eftdata"
+                android:id="@+id/effectdata"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/eftdata" />
+                android:text="효능효과" />
+
+            <TextView
+                android:id="@+id/take"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="[복용방법]"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/takedata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="복용방법" />
+
+            <TextView
+                android:id="@+id/caution"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="[주의사항]"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/cautiondata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="주의사항" />
+
+            <TextView
+                android:id="@+id/withWarm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="[withWarm]"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/withWarmdata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="withWarm" />
+
+            <TextView
+                android:id="@+id/event"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="[event]"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/eventdata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="event" />
+
+            <TextView
+                android:id="@+id/store"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="[구매처]"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/storedata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="구매처" />
 
         </LinearLayout>
     </ScrollView>
