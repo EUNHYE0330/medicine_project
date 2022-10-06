@@ -72,6 +72,9 @@
             android:name="com.example.medicine_project.AlarmActivity"
             android:exported="false"
             android:theme="@style/AppOverlayTheme"/>
+        <activity
+            android:name=".DetailActivity"
+            android:exported="false" />
 
     </application>
 
