@@ -12,7 +12,6 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
-import me.dm7.barcodescanner.zxing.sample.Drug;
 import me.dm7.barcodescanner.zxing.sample.R;
 
 public class MainActivity extends AppCompatActivity {

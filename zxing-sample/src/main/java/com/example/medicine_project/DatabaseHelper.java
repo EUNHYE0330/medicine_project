@@ -123,9 +123,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     // 해당 Row 저장
                     Drug drug = new Drug();
 
-                    drug.setCompanyName(mCursor.getString(0));
-                    drug.setDrugName(mCursor.getString(1));
-                    drug.setCode(mCursor.getString(2));
+                    drug.setCompany(mCursor.getString(0));
+                    drug.setName(mCursor.getString(1));
+                    drug.setId(mCursor.getString(2));
                     drug.setDrugEffect(mCursor.getString(3));
                     drug.setTake(mCursor.getString(4));
                     drug.setCaution(mCursor.getString(5));

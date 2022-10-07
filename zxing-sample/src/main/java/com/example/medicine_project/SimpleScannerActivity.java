@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
-import me.dm7.barcodescanner.zxing.sample.Drug;
 import me.dm7.barcodescanner.zxing.sample.R;
 
 public class SimpleScannerActivity extends BaseScannerActivity implements ZXingScannerView.ResultHandler {

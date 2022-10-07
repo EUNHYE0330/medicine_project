@@ -73,8 +73,9 @@
             android:exported="false"
             android:theme="@style/AppOverlayTheme"/>
         <activity
-            android:name=".DetailActivity"
-            android:exported="false" />
+            android:name="com.example.medicine_project.DetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat"/>
 
     </application>
 

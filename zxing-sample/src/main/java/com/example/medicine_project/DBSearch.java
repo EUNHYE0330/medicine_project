@@ -5,8 +5,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import me.dm7.barcodescanner.zxing.sample.Drug;
-
 public class DBSearch extends SQLiteOpenHelper {
 
     @Override
@@ -56,7 +54,7 @@ public class DBSearch extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             drug.setCompany(cursor.getString(0));
             drug.setName(cursor.getString(1));
-            drug.setId(cursor.getInt(2));
+            drug.setId(cursor.getString(2));
             drug.setDrugEffect(cursor.getString(3));
             drug.setTake(cursor.getString(4));
             drug.setCaution(cursor.getString(5));
