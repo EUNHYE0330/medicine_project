@@ -8,11 +8,11 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:appComponentFactory="whateverString"
-        tools:replace="android:appComponentFactory"
         android:allowBackup="true"
+        android:appComponentFactory="whateverString"
+        android:icon="@drawable/ic_launcher"
         android:label="약 알리미"
-        android:icon="@drawable/ic_launcher">
+        tools:replace="android:appComponentFactory">
         <activity
             android:name="com.example.medicine_project.LoadingActivity"
             android:exported="true"
@@ -26,15 +26,14 @@
         <activity
             android:name="com.example.medicine_project.MenuActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light"/>
+            android:theme="@style/Theme.AppCompat.Light" />
         <activity
             android:name="com.example.medicine_project.RESULT_ACTIVITY"
             android:exported="false"
-            android:theme="@style/AppOverlayTheme"></activity>
+            android:theme="@style/AppOverlayTheme" />
         <activity
             android:name="com.example.medicine_project.MainActivity"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name="com.example.medicine_project.FullScannerActivity"
             android:theme="@style/AppOverlayTheme"
@@ -53,31 +52,29 @@
         </activity>
         <activity
             android:name="com.example.medicine_project.SimpleScannerActivity"
-            android:theme="@style/AppOverlayTheme"></activity>
+            android:theme="@style/AppOverlayTheme" />
         <activity
             android:name="com.example.medicine_project.SimpleScannerFragmentActivity"
-            android:theme="@style/AppOverlayTheme"></activity>
+            android:theme="@style/AppOverlayTheme" />
         <activity
             android:name="com.example.medicine_project.FullScreenScannerFragmentActivity"
-            android:theme="@style/AppOverlayTheme"></activity>
+            android:theme="@style/AppOverlayTheme" />
         <activity
             android:name="com.example.medicine_project.CustomViewFinderScannerActivity"
             android:label="@string/custom_view_finder_scanner_activity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.example.medicine_project.ScalingScannerActivity"
             android:label="@string/scaling_scanner_activity"
-            android:theme="@style/AppTheme"></activity>
-
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.example.medicine_project.AlarmActivity"
             android:exported="false"
-            android:theme="@style/AppOverlayTheme"/>
+            android:theme="@style/AppOverlayTheme" />
         <activity
             android:name="com.example.medicine_project.DetailActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat"/>
-
+            android:theme="@style/Theme.AppCompat" />
     </application>
 
 </manifest>

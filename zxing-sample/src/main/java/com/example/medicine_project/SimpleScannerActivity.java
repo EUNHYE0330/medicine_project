@@ -48,7 +48,7 @@ public class SimpleScannerActivity extends BaseScannerActivity implements ZXingS
         drug = dbHandler.search(rawResult.getText());
 
         // RESULT_ACTIVITY로 검색하고 반환받았던 약 객체를 인텐트로 전달
-        Intent intent = new Intent(getApplicationContext(), RESULT_ACTIVITY.class);
+        Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
         intent.putExtra("drug", drug);
         startActivity(intent);
 

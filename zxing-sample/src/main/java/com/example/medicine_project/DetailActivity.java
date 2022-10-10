@@ -18,7 +18,7 @@ public class DetailActivity extends AppCompatActivity {
     Button bt_adlist;
 
     public String drugstr;
-    private DBSearch dBSearch;
+    // private DBSearch dBSearch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

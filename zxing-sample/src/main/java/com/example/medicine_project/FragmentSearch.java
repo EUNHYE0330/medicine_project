@@ -1,5 +1,6 @@
 package com.example.medicine_project;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -28,7 +29,6 @@ public class FragmentSearch extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        drug = new Drug();
     }
 
     @Override
@@ -50,12 +50,9 @@ public class FragmentSearch extends Fragment {
             @Override
             public void onClick(View view) {
                 drug = new Drug();
-                String text = txAutoComplete.getText().toString();
-                Toast.makeText(getContext(), text, Toast.LENGTH_SHORT).show();
-                drug = dbHandler.search(text);
-                Intent intent = new Intent(getActivity(), RESULT_ACTIVITY.class);
-
-                intent.putExtra("drug", drug);
+                String drugName = txAutoComplete.getText().toString();
+                Intent intent = new Intent(getActivity(), Convey.class);
+                intent.putExtra("drugName", drugName);
                 startActivity(intent);
             }
         });
