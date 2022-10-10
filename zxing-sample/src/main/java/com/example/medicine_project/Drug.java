@@ -9,14 +9,12 @@ public class Drug implements Parcelable {
     private String name;
     private String image;
     private String barcode;
-
     private String drugeffect;
     private String take;
     private String caution;
     private String withwarm;
     private String event;
     private String store;
-
     private String id;
 
     public String getCompany() { return company;   }
@@ -79,16 +77,8 @@ public class Drug implements Parcelable {
         this.store = "EMPTY";
         this.drugeffect = "EMPTY";
     }
-
-    public Drug(String drugName) {
-        this.name = drugName;
-    }
-
-    public Drug(String company, String name, String image, String barcode) {
-        this.company = company;
+    public Drug(String name) {
         this.name = name;
-        this.image = image;
-        this.barcode = barcode;
     }
 
     protected Drug(Parcel in) {
@@ -96,7 +86,6 @@ public class Drug implements Parcelable {
         name = in.readString();
         image = in.readString();
         barcode = in.readString();
-
         drugeffect = in.readString();
         take = in.readString();
         caution = in.readString();

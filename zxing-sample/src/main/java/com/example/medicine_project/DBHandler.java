@@ -49,25 +49,49 @@ public class DBHandler extends SQLiteOpenHelper {
         // database for reading our database.
         SQLiteDatabase db = this.getReadableDatabase();
 
-        // on below line we are creating a cursor with query to read data from database.
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE `barcode` is " + barcode, null);
+        // 숫자로 시작하고  13자리 길이면 바코드로 인식캐서 바코드 쿼리 실행
+        if( (barcode.length() == 13) && (barcode.charAt(0) >= '0') && barcode.charAt(0) <= '9' ){
+            // on below line we are creating a cursor with query to read data from database.
+            Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE `barcode` is " + barcode, null);
 
-        // moving our cursor to first position.
-        if (cursor.moveToFirst()) {
+            // moving our cursor to first position.
+            if (cursor.moveToFirst()) {
 
-            drug.setCompany(cursor.getString(0));
-            drug.setName(cursor.getString(1));
-            drug.setId(cursor.getString(2));
-            drug.setDrugEffect(cursor.getString(3));
-            drug.setTake(cursor.getString(4));
-            drug.setCaution(cursor.getString(5));
-            drug.setWithWarm(cursor.getString(6));
-            drug.setEvent(cursor.getString(7));
-            drug.setStore(cursor.getString(8));
-            drug.setImage(cursor.getString(9));
-            drug.setBarcode(barcode);
+                drug.setCompany(cursor.getString(0));
+                drug.setName(cursor.getString(1));
+                drug.setId(cursor.getString(2));
+                drug.setDrugEffect(cursor.getString(3));
+                drug.setTake(cursor.getString(4));
+                drug.setCaution(cursor.getString(5));
+                drug.setWithWarm(cursor.getString(6));
+                drug.setEvent(cursor.getString(7));
+                drug.setStore(cursor.getString(8));
+                drug.setImage(cursor.getString(9));
+                drug.setBarcode(barcode);
+            }
+            cursor.close();
+        } else {
+            // on below line we are creating a cursor with query to read data from database.
+            Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE `drugName` is " + barcode, null);
+
+            // moving our cursor to first position.
+            if (cursor.moveToFirst()) {
+
+                drug.setCompany(cursor.getString(0));
+                drug.setName(cursor.getString(1));
+                drug.setId(cursor.getString(2));
+                drug.setDrugEffect(cursor.getString(3));
+                drug.setTake(cursor.getString(4));
+                drug.setCaution(cursor.getString(5));
+                drug.setWithWarm(cursor.getString(6));
+                drug.setEvent(cursor.getString(7));
+                drug.setStore(cursor.getString(8));
+                drug.setImage(cursor.getString(9));
+                drug.setBarcode(barcode);
+            }
+            cursor.close();
         }
-        cursor.close();
+
 
         return drug;
     }

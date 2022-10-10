@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import me.dm7.barcodescanner.zxing.sample.R;
@@ -21,10 +22,13 @@ public class FragmentSearch extends Fragment {
     private ArrayList<String> DrugList;
     private AutoComplete autoDB;
     Button myButton;
+    DBHandler dbHandler;
 
+    Drug drug;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        drug = new Drug();
     }
 
     @Override
@@ -45,8 +49,13 @@ public class FragmentSearch extends Fragment {
         searchbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), DetailActivity.class);
-                intent.putExtra("drugName", txAutoComplete.getText().toString());
+                drug = new Drug();
+                String text = txAutoComplete.getText().toString();
+                Toast.makeText(getContext(), text, Toast.LENGTH_SHORT).show();
+                drug = dbHandler.search(text);
+                Intent intent = new Intent(getActivity(), RESULT_ACTIVITY.class);
+
+                intent.putExtra("drug", drug);
                 startActivity(intent);
             }
         });

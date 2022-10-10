@@ -7,77 +7,88 @@
     android:orientation="vertical"
     tools:context="com.example.medicine_project.RESULT_ACTIVITY">
 
-    <ImageView
-        android:id="@+id/drugImage"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:layout_gravity="left"
-        android:layout_marginBottom="40dp"
-        android:minWidth="25dp"
-        android:minHeight="25dp"
-        tools:text="이미지" />
-
-    <TextView
-        android:id="@+id/drugCompany"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="20sp" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/drugName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="20sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/drugCode"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="20sp" />
+            <ImageView
+                android:id="@+id/drugImage"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_gravity="left"
+                android:layout_marginBottom="40dp"
+                android:minWidth="25dp"
+                android:minHeight="25dp"
+                tools:text="이미지" />
 
-    <TextView
-        android:id="@+id/drugEffect"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="20sp" />
+            <TextView
+                android:id="@+id/drugEffect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/drugTake"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="20sp" />
+            <TextView
+                android:id="@+id/drugTake"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/drugCaution"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="20sp" />
+            <TextView
+                android:id="@+id/drugCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/drugWarning"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="20sp" />
+            <TextView
+                android:id="@+id/drugEvent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/drugEvent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="20sp" />
+            <TextView
+                android:id="@+id/drugStore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/drugStore"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="20sp" />
+            <TextView
+                android:id="@+id/drugCaution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/drugCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/drugName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/drugWarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
