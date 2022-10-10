@@ -51,8 +51,10 @@ public class FragmentSearch extends Fragment {
             public void onClick(View view) {
                 drug = new Drug();
                 String drugName = txAutoComplete.getText().toString();
-                Intent intent = new Intent(getActivity(), Convey.class);
-                intent.putExtra("drugName", drugName);
+
+                drug = dbHandler.search(drugName);
+                Intent intent = new Intent(getActivity(), DetailActivity.class);
+                intent.putExtra("drug", drug);
                 startActivity(intent);
             }
         });
